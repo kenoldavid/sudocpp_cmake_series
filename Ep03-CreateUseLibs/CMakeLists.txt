@@ -19,7 +19,10 @@ message("-- Ken is generating...${PROJECT_NAME}
 
 include_directories(.)
 
-add_library(console console.cpp)
+# builds a STATIC library by default
+#add_library(console console.cpp)
+
+add_library(console SHARED console.cpp)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
